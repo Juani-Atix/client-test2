@@ -7,11 +7,12 @@ import Loading from './Loading';
 import LoginForm from './LoginForm';
 import PlayerPage from './PlayerPage';
 import CommentsPage from './CommentsPage';
+import WordsPage from './WordsPage';
 
 const App = ({ currentUser, refetch, userLoading }) => (
   <div>
     <div className="App-block">
-      <CommentsPage />
+      <WordsPage />
       {/*userLoading
         ? <Loading />
         : <div className="App-content">

@@ -17,11 +17,14 @@ class AddComment extends React.Component {
           message: this.state.message,
         },
         update: function(store, { data: { addComment } }) {
-          const data = store.readQuery({
+          let data = store.readQuery({
             query: LIST_COMMENTS,
           });
 
-          data.getAllComments.push(addComment);
+          const aux = [...data.getAllComments, addComment];
+          data = aux;
+
+          // data.getAllComments.push(addComment);
           store.writeQuery({ query: LIST_COMMENTS, data });
         },
       })
