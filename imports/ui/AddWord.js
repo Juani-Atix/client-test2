@@ -44,6 +44,7 @@ class AddWord extends React.Component {
 
           store.writeQuery({
             query: LIST_WORDS,
+            variables: { languageCodes: [addWord.languageCode] },
             data,
           });
         },
